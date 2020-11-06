@@ -36,8 +36,8 @@ bot = commands.Bot(command_prefix='n!')
 prefix = 'n!'
 fartbaby = []
 sanjay = []
-ACCESS_KEY = 'AKIAI5VZR2QXQVFDZYZA'
-SECRET_KEY = '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'
+ACCESS_KEY = ''
+SECRET_KEY = 'gte trolled!'
 client = discord.Client()
 d = {}
 # Hello Horse it is trump justto see if it is even working
