@@ -1,16 +1,9 @@
-import http.server
-import socketserver
-import random
-import logging
-from subprocess import Popen
+from flask import *
 
-logging.basicConfig(filename='loggiez.log', format='%(levelname)s:%(message)s', level=logging.DEBUG)
-PORT = 8069
-print("ill be alive at http://18.223.24.247" + str(PORT))
-
-Handler = http.server.SimpleHTTPRequestHandler
-p = Popen(['python3', 'app.py'])
-
-with socketserver.TCPServer(("", PORT), Handler) as httpd:
-    print("im alive at http://18.223.24.247" + str(PORT))
-    httpd.serve_forever()
+@app.route('/image')
+def get_image():
+    if request.args.get('type') == '1':
+       filename = 'ok.gif'
+    else:
+       filename = 'error.gif'
+    return send_file(filename, mimetype='image/gif')
