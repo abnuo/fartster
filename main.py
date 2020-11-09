@@ -7,3 +7,5 @@ def get_image():
     else:
        filename = 'error.gif'
     return send_file(filename, mimetype='image/gif')
+
+app.run()
